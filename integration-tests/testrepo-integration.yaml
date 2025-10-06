@@ -6,7 +6,7 @@ spec:
   params:
     - name: SNAPSHOT
       type: string
-      description: For simplicity, we expect a single component inside our snapshot
+      description: For simplicity, we expect a single component inside our snapshot and merge
   tasks:
     - name: test-hello-world
       params:
