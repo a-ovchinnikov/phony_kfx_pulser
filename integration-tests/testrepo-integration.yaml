@@ -30,5 +30,5 @@ spec:
             script: |
               #!/usr/bin/bash
               echo "Did something"
-              sleep 21
+              go version
               TEST_OUTPUT="foobar"
