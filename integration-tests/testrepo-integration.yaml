@@ -21,7 +21,7 @@ spec:
             description: a description
         steps:
           - name: test-output
-            image: quay.io/konflux-ci/pull-request-builds:hermeto-build-main
+            image: quay.io/konflux-ci/hermeto:latest
             env:
               - name: SNAPSHOT
                 value: "$(params.SNAPSHOT)"
