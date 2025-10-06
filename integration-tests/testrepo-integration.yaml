@@ -28,7 +28,7 @@ spec:
               - name: NAMESPACE
                 value: "$(context.pipelineRun.namespace)"
               - name: FOOBAR
-                value: "$(params)"
+                value: "$(context.pipeline)"
             script: |
               #!/usr/bin/bash
               echo "Did something"
