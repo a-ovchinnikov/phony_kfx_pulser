@@ -27,9 +27,12 @@ spec:
                 value: "$(params.SNAPSHOT)"
               - name: NAMESPACE
                 value: "$(context.pipelineRun.namespace)"
+              - name: FOOBAR
+                value: "$(context.pipelineRun.FOOBARBAZ)"
             script: |
               #!/usr/bin/bash
               echo "Did something"
               go version
+              echo "Foobar is" $FOOBAR
               echo "Done"
               TEST_OUTPUT="foobar"
