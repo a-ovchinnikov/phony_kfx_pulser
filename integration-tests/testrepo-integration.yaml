@@ -21,7 +21,7 @@ spec:
             description: a description
         steps:
           - name: test-output
-            image: registry.redhat.io/openshift4/ose-cli:latest
+            image: quay.io/konflux-ci/pull-request-builds:hermeto-build-main
             env:
               - name: SNAPSHOT
                 value: "$(params.SNAPSHOT)"
