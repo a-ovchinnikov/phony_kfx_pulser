@@ -34,5 +34,6 @@ spec:
               echo "Did something"
               go version
               echo "Foobar is" $FOOBAR
+              env
               echo "Done"
               TEST_OUTPUT="foobar"
