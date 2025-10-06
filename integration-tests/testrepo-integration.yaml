@@ -6,7 +6,7 @@ spec:
   params:
     - name: SNAPSHOT
       type: string
-      description: For simplicity, we expect a single component inside our snapshot this is broken
+      description: For simplicity, we expect a single component inside our snapshot
   tasks:
     - name: test-hello-world
       params:
@@ -30,5 +30,5 @@ spec:
             script: |
               #!/usr/bin/bash
               echo "Did something"
-              sleep 21
+              go version
               TEST_OUTPUT="foobar"
