@@ -35,5 +35,7 @@ spec:
               go version
               echo "Foobar is" $FOOBAR
               env
+              echo "---------"
+              echo $(params.FOOBARBAZ)
               echo "Done"
               TEST_OUTPUT="foobar"
