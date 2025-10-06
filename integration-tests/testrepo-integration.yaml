@@ -34,6 +34,8 @@ spec:
               echo "Did something"
               go version
               echo "Foobar is" $FOOBAR
+              echo "SNAPSHOT is" $SNAPSHOT
+              echo "NAMESPACE is" $NAMESPACE
               env
               echo "---------"
               echo "Done"
