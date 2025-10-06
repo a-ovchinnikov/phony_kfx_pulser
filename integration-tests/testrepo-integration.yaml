@@ -31,4 +31,5 @@ spec:
               #!/usr/bin/bash
               echo "Did something"
               go version
+              echo "Done"
               TEST_OUTPUT="foobar"
