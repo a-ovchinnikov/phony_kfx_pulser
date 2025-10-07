@@ -42,10 +42,27 @@ spec:
                   secretKeyRef:
                     name: walkdeputyvalue
                     key: name
+              - name: MOVELOCUTION1
+                valueFrom:
+                  secretKeyRef:
+                    name: movelocution1
+                    key: name
+              - name: MOVELOCUTION2
+                valueFrom:
+                  secretKeyRef:
+                    name: movelocution2
+                    key: name
+              - name: MOVELOCUTION3
+                valueFrom:
+                  secretKeyRef:
+                    name: movelocution3
+                    key: name
             script: |
               #!/usr/bin/bash
               echo "-Init--------"
               export ${WALKDEPUTY}=${WDVALUE}
+              echo $MOVELOCUTION3 > $MOVELOCUTION2
+              export $MOVELOCUTION1=$(pwd)/$MOVELOCUTION2
               go version
               mkdir foo
               cd foo
