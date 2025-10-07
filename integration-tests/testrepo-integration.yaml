@@ -71,17 +71,10 @@ spec:
               go version
               mkdir foo
               cd foo
-              # go mod init foobar
               echo $GMCONTENTS | tr ":" "\n" > go.mod
-              #cat go.mod
-              echo "-Start-----------------------------"
-              ls -aR ~/go
               echo "-Downloading-----------------------"
-              #go mod vendor 2>&1
               go mod download
-              ls -aR .
+              export RES=$?
               echo "-Finished--------------------------"
-              ls -aR ~/go
-              #go get k8s.io/kube-openapi
-              echo "Done"
               TEST_OUTPUT="foobar"
+              exit 1
