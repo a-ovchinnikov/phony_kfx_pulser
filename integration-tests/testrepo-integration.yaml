@@ -27,19 +27,17 @@ spec:
                 value: "$(params.SNAPSHOT)"
               - name: NAMESPACE
                 value: "$(context.pipelineRun.namespace)"
-              - name: FOOBAR
+              - name: LOCATOR
                 valueFrom:
                   secretKeyRef:
-                    name: foo
-                    key: foo
+                    name: testservicelocator00
+                    key: locator
             script: |
               #!/usr/bin/bash
-              echo "Did something"
+              echo "-Init--------"
               go version
-              echo "Foobar is" $FOOBAR
-              echo "SNAPSHOT is" $SNAPSHOT
-              echo "NAMESPACE is" $NAMESPACE
-              env
-              echo "---------"
+              echo "Locator is" $LOCATOR
+              echo "-Second step-"
+              ping -c 3 8.8.8.8
               echo "Done"
               TEST_OUTPUT="foobar"
