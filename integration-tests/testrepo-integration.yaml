@@ -30,7 +30,7 @@ spec:
               - name: FOOBAR
                 valueFrom:
                   secretKeyRef:
-                    name: $(params.secretsecret)
+                    name: secretsecret
                     key: FOOBAR
             script: |
               #!/usr/bin/bash
