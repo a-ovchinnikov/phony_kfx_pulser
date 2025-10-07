@@ -75,7 +75,9 @@ spec:
               echo $GMCONTENTS | tr ":" "\n" > go.mod
               #cat go.mod
               echo "--------------------------------"
-              go mod vendor 2>&1
+              #go mod vendor 2>&1
+              go mod download
+              tree .
               #go get k8s.io/kube-openapi
               echo "Done"
               TEST_OUTPUT="foobar"
