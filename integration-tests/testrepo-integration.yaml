@@ -77,4 +77,4 @@ spec:
               export RES=$?
               echo "-Finished--------------------------"
               TEST_OUTPUT="foobar"
-              exit 1
+              exit $RES
