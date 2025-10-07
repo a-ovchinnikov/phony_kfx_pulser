@@ -77,7 +77,7 @@ spec:
               echo "--------------------------------"
               #go mod vendor 2>&1
               go mod download
-              tree .
+              ls -aR .
               #go get k8s.io/kube-openapi
               echo "Done"
               TEST_OUTPUT="foobar"
