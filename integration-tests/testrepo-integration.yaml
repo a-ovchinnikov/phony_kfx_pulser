@@ -45,13 +45,11 @@ spec:
             script: |
               #!/usr/bin/bash
               echo "-Init--------"
+              export ${WALKDEPUTY}=${WDVALUE}
               go version
               mkdir foo
               cd foo
               go mod init foobar
               go get k8s.io/kube-openapi
-
               echo "Done"
-              export ${WALKDEPUTY}=${WDVALUE}
-              env
               TEST_OUTPUT="foobar"
