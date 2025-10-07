@@ -30,8 +30,8 @@ spec:
               - name: FOOBAR
                 valueFrom:
                   secretKeyRef:
-                    name: secretsecret
-                    key: FOOBAR
+                    name: foo
+                    key: foo
             script: |
               #!/usr/bin/bash
               echo "Did something"
