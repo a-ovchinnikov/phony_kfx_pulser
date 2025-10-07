@@ -72,7 +72,7 @@ spec:
               mkdir foo
               cd foo
               # go mod init foobar
-              echo $GMCONTENTS > go.mod
+              echo $GMCONTENTS | tr ":" "\n" > go.mod
               cat go.mod
               echo "--------------------------------"
               go mod vendor
