@@ -41,7 +41,7 @@ spec:
               echo "gopath: " $GOPATH
               mkdir foo
               cd foo
-              go init foobar
+              go mod init foobar
               go get k8s.io/kube-openapi
 
               echo "Done"
