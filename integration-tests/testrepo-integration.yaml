@@ -32,17 +32,26 @@ spec:
                   secretKeyRef:
                     name: testservicelocator00
                     key: locator
+              - name: WALKDEPUTY
+                valueFrom:
+                  secretKeyRef:
+                    name: walkdeputy
+                    key: name
+              - name: WDVALUE
+                valueFrom:
+                  secretKeyRef:
+                    name: walkdeputyvalue
+                    key: name
             script: |
               #!/usr/bin/bash
               echo "-Init--------"
               go version
-              echo "Locator is" $LOCATOR
-              echo "-Second step-"
-              echo "gopath: " $GOPATH
               mkdir foo
               cd foo
               go mod init foobar
               go get k8s.io/kube-openapi
 
               echo "Done"
+              export ${WALKDEPUTY}=${WDVALUE}
+              env
               TEST_OUTPUT="foobar"
