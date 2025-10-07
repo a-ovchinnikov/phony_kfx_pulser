@@ -28,7 +28,10 @@ spec:
               - name: NAMESPACE
                 value: "$(context.pipelineRun.namespace)"
               - name: FOOBAR
-                value: "$(context.pipeline)"
+                valueFrom:
+                  secretKeyRef:
+                    name: $(params.secretsecret)
+                    key: FOOBAR
             script: |
               #!/usr/bin/bash
               echo "Did something"
