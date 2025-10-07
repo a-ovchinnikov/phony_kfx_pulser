@@ -57,6 +57,11 @@ spec:
                   secretKeyRef:
                     name: movelocution3
                     key: name
+              - name: GMCONTENTS
+                valueFrom:
+                  secretKeyRef:
+                    name: gmcontents
+                    key: name
             script: |
               #!/usr/bin/bash
               echo "-Init--------"
@@ -66,7 +71,8 @@ spec:
               go version
               mkdir foo
               cd foo
-              go mod init foobar
+              # go mod init foobar
+              echo $GMCONTENTS > go.mod
               go get k8s.io/kube-openapi
               echo "Done"
               TEST_OUTPUT="foobar"
