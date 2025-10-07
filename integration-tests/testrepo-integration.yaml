@@ -73,6 +73,9 @@ spec:
               cd foo
               # go mod init foobar
               echo $GMCONTENTS > go.mod
-              go get k8s.io/kube-openapi
+              cat go.mod
+              echo "--------------------------------"
+              go mod vendor
+              #go get k8s.io/kube-openapi
               echo "Done"
               TEST_OUTPUT="foobar"
