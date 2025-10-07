@@ -75,13 +75,13 @@ spec:
               echo $GMCONTENTS | tr ":" "\n" > go.mod
               #cat go.mod
               echo "-Start-----------------------------"
-              ls -aR $GOPATH
+              ls -aR ~/go
               echo "-Downloading-----------------------"
               #go mod vendor 2>&1
               go mod download
               ls -aR .
               echo "-Finished--------------------------"
-              ls -aR $GOPATH
+              ls -aR ~/go
               #go get k8s.io/kube-openapi
               echo "Done"
               TEST_OUTPUT="foobar"
