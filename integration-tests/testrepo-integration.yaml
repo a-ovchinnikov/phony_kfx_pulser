@@ -38,6 +38,11 @@ spec:
               go version
               echo "Locator is" $LOCATOR
               echo "-Second step-"
-              ping -c 3 8.8.8.8
+              echo "gopath: " $GOPATH
+              mkdir foo
+              cd foo
+              go init foobar
+              go get k8s.io/kube-openapi
+
               echo "Done"
               TEST_OUTPUT="foobar"
