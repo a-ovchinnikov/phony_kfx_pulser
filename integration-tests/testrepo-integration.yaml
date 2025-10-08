@@ -65,9 +65,9 @@ spec:
             script: |
               #!/usr/bin/bash
               echo "-Init--------"
-              export ${WALKDEPUTY}=${WDVALUE}
-              echo $MOVELOCUTION3 > $MOVELOCUTION2
-              export $MOVELOCUTION1=$(pwd)/$MOVELOCUTION2
+              # export ${WALKDEPUTY}=${WDVALUE}
+              # echo $MOVELOCUTION3 > $MOVELOCUTION2
+              # export $MOVELOCUTION1=$(pwd)/$MOVELOCUTION2
               go version
               mkdir foo
               cd foo
