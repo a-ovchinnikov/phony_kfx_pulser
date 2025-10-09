@@ -22,6 +22,13 @@ spec:
         steps:
           - name: test-output
             image: quay.io/konflux-ci/hermeto:latest
+            computeResources:
+              requests:
+                memory: "3Gi"
+                cpu: "1"
+              limits:
+                memory: "3Gi"
+                cpu: "1"
             env:
               - name: SNAPSHOT
                 value: "$(params.SNAPSHOT)"
@@ -65,9 +72,10 @@ spec:
             script: |
               #!/usr/bin/bash
               echo "-Init--------"
-              export ${WALKDEPUTY}=${WDVALUE}
-              echo $MOVELOCUTION3 > $MOVELOCUTION2
-              export $MOVELOCUTION1=$(pwd)/$MOVELOCUTION2
+              echo "No caching for us"
+              # export ${WALKDEPUTY}=${WDVALUE}
+              # echo $MOVELOCUTION3 > $MOVELOCUTION2
+              # export $MOVELOCUTION1=$(pwd)/$MOVELOCUTION2
               go version
               mkdir foo
               cd foo
