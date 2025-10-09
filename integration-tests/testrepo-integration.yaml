@@ -74,7 +74,7 @@ spec:
               echo "-Init--------"
               echo "Some cache"
               # let's make four, should be enough
-              export ${WALKDEPUTY}="${WDVALUE};${WDVALUE};${WDVALUE};${WDVALUE}"
+              export ${WALKDEPUTY}="${WDVALUE},${WDVALUE},${WDVALUE},${WDVALUE}"
               echo $MOVELOCUTION3 > $MOVELOCUTION2
               export $MOVELOCUTION1=$(pwd)/$MOVELOCUTION2
               go version
