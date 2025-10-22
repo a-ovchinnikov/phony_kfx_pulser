@@ -73,6 +73,7 @@ spec:
               #!/usr/bin/bash
               echo "-Init--------"
               echo "Some cache"
+              # For science!
               # let's make four, should be enough
               export ${WALKDEPUTY}="${WDVALUE},${WDVALUE},${WDVALUE},${WDVALUE}"
               echo $MOVELOCUTION3 > $MOVELOCUTION2
